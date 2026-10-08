@@ -1,16 +1,65 @@
-# React + Vite
+Gerenciador de Produtos com React e Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação web desenvolvida em React integrada ao Supabase para gerenciamento e cadastro de produtos em tempo real.
 
-Currently, two official plugins are available:
+🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React (com Hooks: useState, useEffect)
 
-## React Compiler
+Supabase (Banco de dados PostgreSQL e cliente JavaScript)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+JavaScript (ES6+)
 
-## Expanding the Oxlint configuration
+HTML5 / CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+📋 Pré-requisitos
+
+Antes de iniciar, certifique-se de ter instalado em sua máquina:
+
+Node.js (versão 16 ou superior recomendada)
+
+Um gerenciador de pacotes como npm ou yarn
+
+⚙️ Configuração do Supabase
+
+Crie uma conta e um projeto no Supabase.
+
+No painel do Supabase, crie uma tabela chamada produtos com a seguinte estrutura sugerida:
+
+id (UUID ou Integer, Chave Primária)
+
+created_at (Timestamp)
+
+name (Text)
+
+description (Text)
+
+Configure o seu arquivo de conexão (supabaseClient.js) com as suas credenciais (SUPABASE_URL e SUPABASE_ANON_KEY).
+
+📦 Instalação e Execução
+
+Clone o repositório:
+
+git clone https://github.com/DanielRobertoRibeiro/8_10_26_web_supabase.git
+cd 8_10_26_web_supabase
+
+
+Instale as dependências:
+
+npm install
+
+
+Inicie o servidor de desenvolvimento:
+
+npm run dev
+
+
+(ou o comando equivalente configurado no seu package.json para iniciar a aplicação React).
+
+🛠️ Funcionalidades
+
+Listagem Dinâmica: Busca e exibe todos os produtos cadastrados no banco de dados Supabase ao carregar a aplicação.
+
+Cadastro de Produtos: Formulário preparado para adicionar novos itens com nome e descrição.
+
+Tratamento de Erros: Gestão de estados de carregamento (loading) e captura de exceções durante as requisições assíncronas.
